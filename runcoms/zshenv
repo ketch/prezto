@@ -17,8 +17,8 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='vim'
+export VISUAL='mvim'
 export PAGER='less'
 
 #
@@ -74,11 +74,18 @@ for path_file in /etc/manpaths.d/*(.N); do
 done
 unset path_file
 
+# PETSc
+
+export PETSC_DIR='/Users/ketch/soft/petsc-3.1.-p8'
+export PETSC_ARCH='pyclaw64'
+
 # Set the list of directories that Zsh searches for programs.
 path=(
+  /usr/local/share/python
   /usr/local/{bin,sbin}
   /usr/{bin,sbin}
   /{bin,sbin}
+  $PETSC_DIR/$PETSC_ARCH/bin
   $path
 )
 
@@ -98,3 +105,6 @@ if [[ -d "$TMPDIR" ]]; then
   fi
 fi
 
+export WORKON_HOME='~/sandbox/envs'
+
+source /usr/local/share/python/virtualenvwrapper.sh
