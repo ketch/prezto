@@ -12,3 +12,4 @@ fi
 
 # Customize to your needs...
 
+alias matlab="/Applications/MATLAB_R2012a.app/bin/matlab -nodesktop -nosplash"

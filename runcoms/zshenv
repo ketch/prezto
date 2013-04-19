@@ -86,6 +86,7 @@ path=(
   /usr/{bin,sbin}
   /{bin,sbin}
   $PETSC_DIR/$PETSC_ARCH/bin
+  /usr/local/Cellar/ruby/1.9.3-p194/bin
   $path
 )
 
@@ -108,3 +109,17 @@ fi
 export WORKON_HOME='~/sandbox/envs'
 
 source /usr/local/share/python/virtualenvwrapper.sh
+
+alias workstation="ssh ketch@10.68.170.4"
+alias pyserver="python -m SimpleHTTPServer"
+
+export SOFT=/Users/ketch/Research/Software
+export PYTHONPATH=/Users/ketch/python:$SOFT
+export PYTHONPATH=/usr/local/lib/python:$PYTHONPATH
+
+peanoclaw_prep() {
+    export PEANOCLAW_PYTHONHOME=/usr/local/Cellar/python/2.7.3/Frameworks/Python.framework/Versions/Current
+    export PEANOCLAW_SRC=/Users/ketch/Downloads/peanoclaw/src
+}
+
+
