@@ -108,8 +108,6 @@ fi
 
 export WORKON_HOME='~/sandbox/envs'
 
-source /usr/local/share/python/virtualenvwrapper.sh
-
 alias workstation="ssh ketch@10.68.170.4"
 alias pyserver="python -m SimpleHTTPServer"
 
@@ -122,4 +120,7 @@ peanoclaw_prep() {
     export PEANOCLAW_SRC=/Users/ketch/Downloads/peanoclaw/src
 }
 
+export PATH=/Users/ketch/anaconda/bin:$PATH
 
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
